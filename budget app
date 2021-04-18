@@ -1,0 +1,52 @@
+class Budget:
+     def _init_(self, category, amount):
+          self.category = category
+          self.amount = amont
+
+     def deposit(amount, bal):
+          bal += amount
+          return bal
+
+     def withdraw (user, amount, bal):
+          bal -= amount
+          return bal
+
+     def balance(db):
+          for categ, bal in db.items():
+               print(categ, bal)
+
+     def transfer(db, option1, amount, option2):
+          value1 = db[option1]
+          value2 = db[option2]
+
+          db[option1] = int(value1) - amount
+          db[option2] = int(value2) + amount
+          return db
+
+def init():
+     print('Welcome to the Budget app \n')
+     menu()
+
+def menu():
+     try:
+
+          user = int(input('\n What would you like to do?  \nPress(1) To create a new budget \nPress (2) To deposit into a budget \nPress (3) To withdraw from a budget \nPress (4) To check your budget balance \nPress (5) To transfer money between budgets \nPress (6) To quit'))
+     except:
+          print('Invalid input')
+          menu()
+
+     if (user ==1):
+          new_budget()
+     elif (user == 2):
+          credit()
+     elif (user == 3):
+          debit()
+     elif (user == 4):
+          balance()
+     elif (user == 5):
+          transfer()
+     elif (user == 6):
+          out()
+     else:
+          print('Invalid input\n')
+          menu()
